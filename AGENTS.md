@@ -18,8 +18,7 @@
    - NEVER remove version checks or upgrade Xray to versions >= `v26.7.11` or `v26.9.8`:
      - `v26.7.11+` checks client versions in Session ID; Mihomo (FlClash) hardcodes `1.8.2`, causing Xray to reject it.
      - `v26.9.8+` mandates `X25519MLKEM768` (Kyber) key share in REALITY. Mihomo/sing-box without Kyber fail the handshake and get redirected to decoy (`received real certificate`).
-   - NEVER inject `support-x25519mlkem768: true` into client configs while server runs Xray <= 26.6.27.
-   - Fingerprint MUST remain `firefox` (`kit net fp firefox`). Do not switch to `chrome`.
+   - Fingerprint policy: Keep `chrome` (`kit net fp chrome` / DB setting). Mihomo uTLS requires `chrome` to send `X25519MLKEM768` (Kyber) to pass Russian ISP/TSPU DPI filters without dropping. Never use `firefox` as it lacks ML-KEM in uTLS and hangs on Russian ISPs.
 3. **Database & File Permissions**:
    - NEVER copy or overwrite SQLite DB `/etc/x-ui/x-ui.db` without checkpointing WAL (`sqlite3 /etc/x-ui/x-ui.db "PRAGMA wal_checkpoint(TRUNCATE);"`).
    - All subscription and config files served by Nginx from `/var/www/kit-private/` MUST have ownership `root:www-data` and permissions `chmod 640` (otherwise Nginx returns HTTP 403).
