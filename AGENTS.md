@@ -2,7 +2,7 @@
 
 ## Context
 * **Project**: toolstrix 2.0 — clean, personal media downloader powered by yt-dlp.
-* **Server**: Frankfurt VPS (`ssh vps`, Debian 12, 1 vCPU / 1GB RAM).
+* **Server**: Frankfurt VPS (`ssh vps`, Debian 13 trixie, 1 vCPU / 1GB RAM, SSH port 55070 key-only).
 * **Domain & Port**: `tools.stnatrix.space` -> Nginx reverse proxy -> `127.0.0.1:8098`.
 * **Working Directory**: `/opt/toolstrix/`.
 * **System User**: `ytdlpweb` (unprivileged).
