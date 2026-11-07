@@ -19,6 +19,7 @@ ytdlp-env/
 ytdlp-env-prev/
 
 # Legacy and Backups
+backups/
 exported/
 static.bak-*/
 .DS_Store
