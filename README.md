@@ -1,4 +1,4 @@
-# toolstrix 2.0
+# anyDL 2.0
 
 A dedicated, personal media downloader powered by yt-dlp.
 

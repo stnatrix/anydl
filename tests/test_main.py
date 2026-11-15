@@ -23,7 +23,7 @@ def test_static_accessible_without_auth():
 def test_login_flow():
     res_page = client.get("/login")
     assert res_page.status_code == 200
-    assert "toolstrix" in res_page.text
+    assert "anyDL" in res_page.text
 
     res_fail = client.post("/login", json={"key": "wrong_key"})
     assert res_fail.status_code == 401
@@ -41,7 +41,7 @@ def test_index_auth_enforcement():
     client.cookies.set(COOKIE_NAME, token)
     res_auth = client.get("/")
     assert res_auth.status_code == 200
-    assert "toolstrix" in res_auth.text
+    assert "anyDL" in res_auth.text
     client.cookies.clear()
 
 def test_logout():

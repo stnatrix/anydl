@@ -27,7 +27,7 @@ from app.ytdlp.download import ascii_fallback_filename
 BASE_DIR = Path(__file__).resolve().parent
 WEB_DIR = BASE_DIR / "web"
 
-app = FastAPI(title="toolstrix", docs_url=None, redoc_url=None)
+app = FastAPI(title="anyDL", docs_url=None, redoc_url=None)
 app.mount("/static", StaticFiles(directory=WEB_DIR), name="static")
 
 @app.middleware("http")
