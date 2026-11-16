@@ -22,7 +22,7 @@ description: Comprehensive knowledge base, architecture, and operational runbook
 * **Git Status**: Fully cleaned history with verified identity `stnatrix <natrix852@gmail.com>`. All commits properly linked to GitHub avatar.
 
 ## 1. Server Access and Port Invariants
-* **SSH Connection**: `ssh vps` (Frankfurt VPS, Debian 12, 1 vCPU / 1GB RAM).
+* **SSH Connection**: `ssh vps` (Frankfurt VPS, Debian 13 trixie, 1 vCPU / 1GB RAM).
 * **Default SSH User**: Directly logs in as `root`. Do not prepend `sudo` in scripts or automated commands (command not found).
 * **Port Safety**: VPN service **3x-ui** and **Hysteria2** protocol run on this host.
   * *Critical Rule*: **NEVER** interfere with their ports or certificates.

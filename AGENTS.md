@@ -12,7 +12,7 @@
 1. **Protected Services & Active Connection**:
    - NEVER restart or stop `x-ui.service`, `xray`, or `hysteria-server` without explicit user confirmation. The user connects to the internet and server through this VPS; restarting kills active SSH/VPN sessions and disconnects them.
    - NEVER modify ports, configuration, or certificates of **3x-ui** or **Hysteria2**.
-   - NEVER expose the 3X-UI panel publicly (strictly internal on `127.0.0.1:24373`).
+   - NEVER expose the 3X-UI panel publicly (strictly internal on `127.0.0.1:55152`).
 2. **Xray Version Pinning (CRITICAL)**:
    - Xray core MUST remain strictly pinned to `v26.6.27` (`XRAY_PIN="v26.6.27"` in `/usr/local/bin/kit`).
    - NEVER remove version checks or upgrade Xray to versions >= `v26.7.11` or `v26.9.8`:
